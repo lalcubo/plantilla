@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\PermisosUser;
+use Caffeinated\Shinobi\Models\Role;
+use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -16,7 +19,30 @@ class ProductController extends Controller
     {
         $products = Product::paginate();
 
-        return view('products.index', compact('products'));
+        $permissions = Permission::get();
+
+        $individual = PermisosUser::where('user_id',auth()->id())->get();
+
+        $roles = auth()->user()->roles;
+
+        $permisos = [];
+        $i=0;
+        foreach ($permissions as $permission) {
+            if (auth()->user()->can($permission->slug)) {
+                $permisos[$i] = $permission->slug;
+                $i++;
+            }
+        }
+        
+
+        //return view('products.index', compact('products'));
+        return [
+            'products'      => $products,
+            'permissions'   => $permisos,
+            'roles'         => $roles,
+            'individual'    => $individual,
+        ];
+        //return $permissions;
     }
 
     /**
@@ -51,7 +77,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show', compact('product'));
+        return $product;
     }
 
     /**

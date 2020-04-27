@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3 class="text-center">Reporte Gestión de Calidad</h3>
-        <table class="table table-striped table-hover text-sm">
+        <table class="table table-striped table-hover text-sm table-bordered">
             <thead>
                 <tr>
                     <th ></th>
@@ -28,38 +28,10 @@
             </tr>
         </tbody>
         </table>
-        <h3 class="text-center">-----------------------</h3>
-        <table class="table table-striped table-hover text-sm">
-            <thead>
-                <tr>
-                    <th ></th>
-                    <th></th>
-                </tr>
-            </thead>
-        <tbody>
-            <tr v-for="(value,index) in cuantos" :key="index">
-                <td >
-                    <p>{{ vector[value+index-1] }}</p>
-                </td>
-                <td >
-                    <p>{{ vector[value+index] }}</p>
-                </td>
-            </tr>
-        </tbody>
-        </table>
     </div>
 </template>
 <<script>
 export default {
-    data(){
-        return{
-            vector: [1,3,5,7,9,11,13,15,17],
-        }
-    },
-    computed: {
-        cuantos(){
-            return this.vector.length;
-        }
-    }
+
 }
 </script>
