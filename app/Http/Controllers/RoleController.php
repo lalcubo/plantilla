@@ -23,7 +23,7 @@ class RoleController extends Controller
 
         $individual = PermisosUser::where('user_id',auth()->id())->get();
 
-        $permisos = [];
+        $permisos = array();
         $i=0;
         foreach ($permissions as $permission) {
             if (auth()->user()->can($permission->slug)) {
@@ -115,7 +115,7 @@ class RoleController extends Controller
             ->select('permissions.id')
             ->get();
         // para que se envie como un array y no como objeto
-        $permisos_act[] = '';
+        $permisos_act = array();
         $i=0;
         foreach($permisos as $valor){
             $permisos_act[$i] = $valor->id;

@@ -37,6 +37,18 @@ export default new Router ({
 			component: require('./UsersComponent').default,
 		},
 		{
+			path: '/users-show/:id',
+			name: 'users-show',
+			component: require('./UserShowComponent').default,
+			props: true,
+		},
+		{
+			path: '/users-edit/:id',
+			name: 'users-edit',
+			component: require('./UserEditComponent').default,
+			props: true,
+		},
+		{
 			path: '/roles',
 			name: 'roles',
 			component: require('./RolesComponent').default,
