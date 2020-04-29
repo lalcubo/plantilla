@@ -7,6 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## se utilizo plantilla de adminlte con roles (Shinobi)
+Para este ejemplo sencillo se instaló la plantilla adminlte se editó para hacer que tengo menos cosas que la
+original por defecto, se usa auth, vuejs, shinobi, se puede crear roles, eliminar y asignar a un usuario,
+los usuario se crean con la misma opción que da el Laravel y solo se usa con vuej para modificar y asignar
+los roles o permisos individuales, dichos permisos individuales es en caso de que un usuario requiera
+algo muy específico y no se requiera de un rol o crearle uno exclusivo a ese usuario.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
