@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## se utilizo plantilla de adminlte con roles (Shinobi)
+## Se utilizo plantilla de adminlte con roles (Shinobi)
 Para este ejemplo sencillo se instaló la plantilla adminlte se editó para hacer que tengo menos cosas que la
 original por defecto, se usa auth, vuejs, shinobi, se puede crear roles, eliminar y asignar a un usuario,
 los usuario se crean con la misma opción que da el Laravel y solo se usa con vuej para modificar y asignar
